@@ -1,0 +1,26 @@
+{
+  "mapping": {
+    "request" : {
+      "urlPath" : "/api/v1/oferta-rapida",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "id" : {
+          "hasExactly" : [
+            {
+              "equalTo": "1"
+            },
+            {
+              "equalTo": "2"
+            },
+            {
+              "equalTo": "3"
+            }
+          ]
+        }
+      }
+    },
+    "response" : {
+      "status" : 201
+    }
+  }
+}

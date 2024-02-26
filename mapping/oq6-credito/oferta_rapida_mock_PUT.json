@@ -1,0 +1,16 @@
+{
+    "request": {
+        "url": "/api/v1/oferta-rapida",
+        "method": "PUT",
+        "bodyPatterns": [{
+            "matchesJsonPath" : {
+                "expression": "$",
+                "equalToJson": "{\"id\": \"1\", \"name\": \"mock-name\"}"
+            }
+        }]
+    },
+    "response": {
+        "status": 200,
+        "body": "{\"STATUS\": \"Alterado com sucesso método: PUT\"}" 
+    }
+}

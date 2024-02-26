@@ -1,0 +1,11 @@
+{
+    "request": {
+        "url": "/api/v1/oferta-rapida",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "body": "{\"ofertas\": [{ \"nome_produto\": \"oferta-rapida\"}, { \"nome_produto\": \"LIS\"}]}",
+        "fixedDelayMilliseconds": 2000
+    }
+}

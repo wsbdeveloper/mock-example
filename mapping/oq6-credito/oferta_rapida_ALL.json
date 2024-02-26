@@ -1,0 +1,83 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "urlPath": "/api/v1/oferta-rapida",
+        "method": "DELETE",
+        "queryParameters": {
+          "id": {
+            "hasExactly": [
+              { "equalTo": "1" },
+              { "equalTo": "2" },
+              { "equalTo": "3" }
+            ]
+          }
+        }
+      },
+      "response": {
+        "status": 201
+      }
+    },
+    {
+      "request": {
+        "urlPath": "/api/v1/oferta-rapida",
+        "method": "GET",
+        "queryParameters": {
+          "id": {
+            "hasExactly": [
+              { "equalTo": "1" },
+              { "equalTo": "2" },
+              { "equalTo": "3" }
+            ]
+          }
+        }
+      },
+      "response": {
+        "status": 200
+      }
+    },
+    {
+      "request": {
+        "urlPath": "/api/v1/oferta-rapida",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "body": "{\"ofertas\": [{ \"nome_produto\": \"oferta-rapida\"}, { \"nome_produto\": \"LIS\"}]}",
+        "fixedDelayMilliseconds": 2000
+      }
+    },
+    {
+      "request": {
+        "urlPath": "/api/v1/oferta-rapida",
+        "method": "PUT",
+        "bodyPatterns": [{
+          "matchesJsonPath" : {
+            "expression": "$",
+            "equalToJson": "{\"id\": \"1\", \"name\": \"mock-name\"}"
+          }
+        }]
+      },
+      "response": {
+        "status": 200,
+        "body": "{\"STATUS\": \"Alterado com sucesso método: PATCH\"}" 
+      }
+    },
+    {
+      "request": {
+        "urlPath": "/api/v1/oferta-rapida",
+        "method": "POST",
+        "bodyPatterns": [{
+          "matchesJsonPath" : {
+            "expression": "$",
+            "equalToJson": "{\"id\": \"1\", \"name\": \"mock-name\"}"
+          }
+        }]
+      },
+      "response": {
+        "status": 200,
+        "body": "{\"STATUS\": \"OK\"}"
+      }
+    }
+  ]
+}

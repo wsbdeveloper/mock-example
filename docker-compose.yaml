@@ -1,0 +1,9 @@
+version: "3"
+services:
+  wiremock-credito:
+   image: wiremock/wiremock
+   volumes:
+     - ./__files:/home/wiremock/__files
+     - ./mapping:/home/wiremock/mappings
+   ports:
+     - 8080:8080
